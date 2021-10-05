@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { createMemoryHistory, createBrowserHistory } from 'history'
-import App from './App'
+import App from './app'
 
 // Mount function to start up the app
 const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
@@ -12,7 +12,6 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
   if (onNavigate) {
     history.listen(onNavigate)
   }
-
   ReactDOM.render(<App history={history} />, el)
 
   return {
